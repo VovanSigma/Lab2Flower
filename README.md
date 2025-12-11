@@ -8,19 +8,19 @@
 
 У проєкті є модель предметної області:
 
-`Flower` – основний клас квітки  
-`VisualParameters` – колір стебла, листків, середній розмір  
-`GrowingTips` – температура, освітлення, полив  
-`Soil` – тип ґрунту (enum)  
-`Multiplying` – спосіб розмноження (enum)  
-`FlowerSorter` – сортування списку квітів (за назвою та середнім розміром)
+`Flower`  основний клас квітки  
+`VisualParameters`  колір стебла, листків, середній розмір  
+`GrowingTips` температура, освітлення, полив  
+`Soil`  тип ґрунту (enum)  
+`Multiplying`  спосіб розмноження (enum)  
+`FlowerSorter`  сортування списку квітів (за назвою та середнім розміром)
 
 Парсери XML:
 
-`FlowerDomParser` – парсинг XML за допомогою DOM  
-`FlowerSaxParser` – парсинг XML за допомогою SAX  
-`FlowerStaxParser` – парсинг XML за допомогою StAX  
-`XmlValidator` – перевірка `greenhouse.xml` по схемі `greenhouse.xsd`
+`FlowerDomParser`  парсинг XML за допомогою DOM  
+`FlowerSaxParser`  парсинг XML за допомогою SAX  
+`FlowerStaxParser`  парсинг XML за допомогою StAX  
+`XmlValidator`  перевірка `greenhouse.xml` по схемі `greenhouse.xsd`
 
 Звіт:
 
