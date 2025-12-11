@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Тип ґрунту -->
+    <xs:simpleType name="soilType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PODZOLIC"/>
+            <xs:enumeration value="GROUND"/>
+            <xs:enumeration value="SOD_PODZOLIC"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Тип розмноження -->
+    <xs:simpleType name="multiplyingType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="LEAF"/>
+            <xs:enumeration value="CUTTING"/>
+            <xs:enumeration value="SEED"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Корінь: greenhouse -->
+    <xs:element name="greenhouse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="flower" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="soil" type="soilType"/>
+                            <xs:element name="origin" type="xs:string"/>
+
+                            <xs:element name="visualParameters">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="stemColor" type="xs:string"/>
+                                        <xs:element name="leafColor" type="xs:string"/>
+                                        <xs:element name="avgSize">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:int">
+                                                    <xs:minInclusive value="1"/>
+                                                    <xs:maxInclusive value="300"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="growingTips">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="temperature">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:int">
+                                                    <xs:minInclusive value="-10"/>
+                                                    <xs:maxInclusive value="50"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="lighting" type="xs:boolean"/>
+                                        <xs:element name="watering">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:int">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="10"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="multiplying" type="multiplyingType"/>
+                        </xs:sequence>
+
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

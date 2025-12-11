@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<greenhouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="greenhouse.xsd">
+
+    <flower id="f1">
+        <name>Rose</name>
+        <soil>GROUND</soil>
+        <origin>Netherlands</origin>
+
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leafColor>darkgreen</leafColor>
+            <avgSize>45</avgSize>
+        </visualParameters>
+
+        <growingTips>
+            <temperature>20</temperature>
+            <lighting>true</lighting>
+            <watering>3</watering>
+        </growingTips>
+
+        <multiplying>SEED</multiplying>
+    </flower>
+
+    <flower id="f2">
+        <name>Tulip</name>
+        <soil>PODZOLIC</soil>
+        <origin>Netherlands</origin>
+
+        <visualParameters>
+            <stemColor>lightgreen</stemColor>
+            <leafColor>green</leafColor>
+            <avgSize>30</avgSize>
+        </visualParameters>
+
+        <growingTips>
+            <temperature>18</temperature>
+            <lighting>true</lighting>
+            <watering>2</watering>
+        </growingTips>
+
+        <multiplying>LEAF</multiplying>
+    </flower>
+
+    <flower id="f3">
+        <name>Orchid</name>
+        <soil>SOD_PODZOLIC</soil>
+        <origin>Thailand</origin>
+
+        <visualParameters>
+            <stemColor>lightgreen</stemColor>
+            <leafColor>darkgreen</leafColor>
+            <avgSize>25</avgSize>
+        </visualParameters>
+
+        <growingTips>
+            <temperature>24</temperature>
+            <lighting>false</lighting>
+            <watering>1</watering>
+        </growingTips>
+
+        <multiplying>CUTTING</multiplying>
+    </flower>
+
+</greenhouse>
